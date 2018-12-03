@@ -1,0 +1,153 @@
+<div>
+  <form class="frame-create-form">
+  <table>
+    <tr><td>
+    <table>
+    <tr>
+      <td>
+      <mat-form-field class="customer-autocomplete">
+        <input matInput placeholder="Customer" aria-label="Customer" matInput [formControl]="customerControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let customer of filteredCustomers | async" [value]="customer">
+          {{customer}}
+        </mat-option>
+      </mat-autocomplete>
+      </mat-form-field>
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <mat-form-field class="jobNumber-autocomplete">
+        <input matInput placeholder="Job Number" aria-label="Job Number" matInput [formControl]="jobNumberControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let jobNumber of filteredJobNumbers | async" [value]="jobNumber">
+          {{jobNumber}}
+        </mat-option>
+      </mat-autocomplete>
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field class="batch-autocomplete">
+        <input matInput placeholder="Batch" aria-label="Batch" matInput [formControl]="batchControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let batch of filteredBatches | async" [value]="batch">
+          {{batch}}
+        </mat-option>
+      </mat-autocomplete>
+      </mat-form-field>
+    </td>
+
+  </tr>
+  </table>
+  </td><td>
+  <table>
+    <tr>
+      <td>
+          <mat-form-field class="kronosDropDown">
+              <mat-select placeholder="Cope">
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            <mat-form-field class="kronosDropDown">
+                <mat-select placeholder="Species">
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <mat-form-field class="kronosDropDown">
+                  <mat-select placeholder="Panel">
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </td>
+        </tr>
+  </table>
+  </td>
+  <td>
+  <table>
+      <tr>
+        <td>
+            <mat-form-field class="kronosDropDown">
+                <mat-select placeholder="Edge">
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <mat-form-field class="kronosDropDown">
+                  <mat-select placeholder="Drawer">
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="kronosDropDown">
+                    <mat-select placeholder="Panel Type">
+                      <mat-option value="option">Option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <mat-slide-toggle
+                class="example-margin"
+                [color]="color"
+                [checked]="checked"
+                [disabled]="disabled">
+              Haunch
+            </mat-slide-toggle>
+            </td>
+          </tr>
+    </table>
+    </td><td>
+    <table>
+      <tr><td>
+          <mat-card>
+            <mat-card-header>Rail Widths</mat-card-header>
+            <mat-card-content>
+              <table><tr><td colspan="3"><mat-form-field class="kronosNumberInput">
+                  <input matInput placeholder="Top" type="number">
+                </mat-form-field></td></tr>
+                <tr><td><mat-form-field class="kronosNumberInput">
+                    <input matInput placeholder="Left" type="number">
+                  </mat-form-field></td><td><mat-form-field class="kronosNumberInput">
+                      <input matInput placeholder="Center" type="number">
+                    </mat-form-field></td><td><mat-form-field class="kronosNumberInput">
+                        <input matInput placeholder="Right" type="number">
+                      </mat-form-field></td></tr>
+                      <tr><td colspan="3"><mat-form-field class="kronosNumberInput">
+                          <input matInput placeholder="Bottom" type="number">
+                        </mat-form-field></td></tr>
+                      </table>
+            </mat-card-content>
+          </mat-card>
+      </td></tr>
+    </table>
+    </td><td>
+    <table><tr><td><mat-form-field class="kronosNumberInput">
+        <input matInput placeholder="Hinges" type="number">
+      </mat-form-field></td></tr>
+      <tr><td><mat-form-field class="kronosNumberInput">
+          <input matInput placeholder="Overlay" type="number">
+        </mat-form-field></td></tr>
+        <tr><td><mat-form-field class="kronosNumberInput">
+            <input matInput placeholder="Thickness" type="number">
+          </mat-form-field></td></tr></table>
+</td></tr></table>
+
+</form>
+</div>

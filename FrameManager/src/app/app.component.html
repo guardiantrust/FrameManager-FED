@@ -1,0 +1,24 @@
+<div style="text-align:center">
+  <button mat-button [matMenuTriggerFor]="framesMenu">Frames</button>
+ <mat-menu #framesMenu="matMenu">
+   <button mat-menu-item>New</button>
+   <button mat-menu-item>Open</button>
+   <button mat-menu-item>Save</button>
+ </mat-menu>
+  <button mat-button [matMenuTriggerFor]="settingsMenu">Settings</button>
+  <mat-menu #settingsMenu="matMenu">
+    <Button mat-menu-item>Cope</Button>
+    <Button mat-menu-item>Species</Button>
+    <Button mat-menu-item>Edge</Button>
+    <Button mat-menu-item>Panel</Button>
+    <Button mat-menu-item>Drawer</Button>
+    <Button mat-menu-item [matMenuTriggerFor]="archesMenu">Arches</Button>
+  </mat-menu>
+
+  <mat-menu #archesMenu="matMenu">
+    <button mat-menu-item>Types</button>
+    <button mat-menu-item>Sizes</button>
+  </mat-menu>
+
+  <app-frame-create></app-frame-create>
+<router-outlet></router-outlet>
